@@ -162,7 +162,8 @@ class PolinaServiceCICDPipeline extends cdk.Stack {
                         new ManualApprovalAction({
                             actionName: 'DeployPolinaServiceToProductionApproval',
                             additionalInformation: 'Ready to deploy to Production?',
-                            externalEntityLink: ppdStack.apiURL,
+                            // TODO: uncomment after first successful pipeline run
+                            // externalEntityLink: ppdStack.apiURL,
                             runOrder: 2,
                         }),
                     ],
